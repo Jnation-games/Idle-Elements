@@ -1,1 +1,26 @@
-
+var v = 1.0;
+var player = {
+    money: { water: 0, fire: 0, air: 0, earth:0 },
+    pixels: { water: { max: 0, cur: 0 }, fire: { max: 0, cur: 0 }, air: { max: 0, cur: 0 }, earth: { max: 0, cur:0 },
+    level: { water: 0, fire: 0, air: 0, earth: [0,0,0,0]},
+    unlock: false,
+    spliced: { water: 0, fire: 0, air: 0, earth: 0 },
+    elements: 0,
+    specced: 0,
+    spectrumLevel: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,-1,-1,-1,-1,-1,-1],
+    options: { fast: false, fps: 50, notation: "Default" },
+    spectrumTimer: 0,
+    wastedTime: 0,
+    sleepingTime:0,
+    previousSpectrums: [{ time: 0, amount: 0}, { time: 0, amount: 0}, { time: 0, amount: 0}, { time: 0, amount: 0}, { time: 0, amount: 0}],
+    lastUpdate: Date.now(),
+    prism: { active: false, potency: { points: 0, total: 0, water: -1, fire: -1, air: -1, earth: -1 }, specbar: { water: false, fire: false, air: false, earth: false }, potencyEff: { water: 1 / 256, fire: 1 / 256, air: 1 / 256, earth: 1 / 256 }, cost: 0,},
+    specbar: { red: false, green: false, blue: false},
+    element: 0,
+    AB: { water: true, fire: true, air: true, earth: true },
+    CM: 1,
+    progress: [],
+    advSpec: { unlock: false, multi: 1, max: 50, reduce: 0.1, time: 0, active: false, gain: 0, SR: 0 },
+    potencyEff: {water:1/256, fire:1/256,air:1/256, earth:1/256},
+}
+let resetplayer;
